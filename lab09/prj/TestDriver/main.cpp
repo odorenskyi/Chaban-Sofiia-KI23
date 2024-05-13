@@ -31,15 +31,15 @@ int main()
     shoes(32);
 
     cout << "\n\n9.3\n\n\n\n\n" << endl;
-    bit(200);
-    bit(102);
-    bit(456);
-    bit(275);
-    bit(1000);
-    bit(610);
-    bit(5);
-    bit(5300);
-    bit(400);
-    bit(700);
+    bit(11000235680);
+    bit(0);
+    bit(300000000000000);
+    bit(1);
+    bit(25);
+    bit(18);
+    bit(100254890);
+    bit(53);
+    bit(42);
+    bit(75023236);
     return 0;
 }
