@@ -2,36 +2,25 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="ModulesChaban" />
+		<Option title="Chaban_task" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/ModulesChaban" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="" />
+				<Option output="bin/Debug/Chaban_task" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
-				<Option type="2" />
+				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option createDefFile="1" />
 				<Compiler>
-					<Add option="-Wall" />
 					<Add option="-g" />
-					<Add directory="../../prj" />
 				</Compiler>
-				<Linker>
-					<Add library="bin/Debug/libModulesChaban.a" />
-					<Add directory="bin/Debug" />
-				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/ModulesChaban" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="" />
+				<Option output="bin/Release/Chaban_task" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
-				<Option type="2" />
+				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option createDefFile="1" />
 				<Compiler>
-					<Add option="-Wall" />
 					<Add option="-O2" />
 				</Compiler>
 				<Linker>
@@ -40,11 +29,13 @@
 			</Target>
 		</Build>
 		<Compiler>
-			<Add directory="../../lr9" />
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="../../prj" />
 		</Compiler>
 		<Linker>
-			<Add library="bin/Debug/libModulesChaban.a" />
-			<Add directory="bin/Debug" />
+			<Add library="../ModulesChaban/bin/Debug/libModulesChaban.a" />
+			<Add directory="../ModulesChaban/bin/Debug" />
 		</Linker>
 		<Unit filename="main.cpp" />
 		<Extensions />
