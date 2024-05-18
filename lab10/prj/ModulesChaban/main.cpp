@@ -159,61 +159,56 @@ int bit(int N){
 }
 
 void task10_1(const char* filename) {
-    // Відкриття файлу для зчитування
-    std::ifstream file(filename);
+    ifstream file(filename);
 
     if (!file.is_open()) {
-        std::cerr << "Unable to open file: " << filename << std::endl;
+        cerr << "Неможливо відкрити файл: " << filename << endl;
         return;
     }
 
-    // Зчитування авторської інформації
-    std::cout << "Авторська інформація: " << "Ім’я Прізвище, Установа, Місто, Країна, Рік" << std::endl;
+    cout << "Авторська інформація: " << "Софія Чабан ЦНТУ Кропивницький 2024" << endl;
 
-    // Зчитування символів верхнього регістру та перевірка на крапки в кінці рядка
     char line[1000];
-    std::cout << "Символи верхнього регістру:" << std::endl;
+    cout << "Символи верхнього регістру:" << endl;
     while (file.getline(line, sizeof(line))) {
         int len = strlen(line);
         for (int i = 0; i < len; ++i) {
-            if (std::isupper(line[i])) {
-                std::cout << line[i];
+            if (isupper(line[i])) {
+                cout << line[i];
             }
         }
         if (line[len - 1] == '.') {
-            std::cout << " Так" << std::endl;
+            cout << " Так" << endl;
         } else {
-            std::cout << " Ні" << std::endl;
+            cout << " Ні" << endl;
         }
     }
 
-    // Виведення вірша одним стовпчиком з чотирьох рядків
-    file.clear(); // Скидання прапорця помилки
-    file.seekg(0, std::ios::beg); // Переміщення покажчика на початок файлу
-    std::cout << "Вірш у вигляді одного стовпчика з чотирьох рядків:" << std::endl;
+    file.clear();
+    file.seekg(0, ios::beg);
+    cout << "Вірш у вигляді одного стовпчика з чотирьох рядків:" << endl;
     int lineCount = 0;
     while (file.getline(line, sizeof(line))) {
-        std::cout << line << std::endl;
+        cout << line << endl;
         ++lineCount;
         if (lineCount % 4 == 0) {
-            std::cout << std::endl; // Вставка порожнього рядка після кожних чотирьох рядків
+            cout << endl;
         }
     }
 
-    // Закриття файлу
     file.close();
 }
 
 void task10_2(const char* filename) {
     ifstream file(filename, ios::binary | ios::ate);
     if (!file.is_open()) {
-        cerr << "Unable to open file " << filename << endl;
+        cerr << "Неможливо відкрити файл " << filename << endl;
         return;
     }
 
     streampos fileSize = file.tellg();
     if (fileSize < 0) {
-        cerr << "Error in getting file size" << endl;
+        cerr << "Помилка отримання розміру файлу" << endl;
         file.close();
         return;
     }
@@ -224,13 +219,13 @@ void task10_2(const char* filename) {
 
     ofstream outfile(filename, ios_base::app);
     if (!outfile.is_open()) {
-        cerr << "Unable to open file " << filename << " for appending" << endl;
+        cerr << "Неможливо відкрити файл " << filename << " для додавання" << endl;
         return;
     }
 
-    outfile << "File size: " << fileSizeKB << " KB" << endl;
+    outfile << "Розмір файлу: " << fileSizeKB << " KB" << endl;
 
-    cout << "File size appended to " << filename << endl;
+    cout << "Розмір файлу, доданого до " << filename << endl;
     fstream filewrite(filename, ios_base::app);
     time_t seconds = time(NULL);
     tm *localeTime = localtime(&seconds);
