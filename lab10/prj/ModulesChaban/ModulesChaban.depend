@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1709851778 source:c:\users\sofia\desktop\óí³âåğ\áìòï\lr8\lr8_1\moduleschaban\main.cpp
+	<iostream>
+	<iomanip>
+	<cmath>
+
+1712578738 source:c:\users\sofia\desktop\óí³âåğ\áìòï\lr8\lr9\moduleschaban\main.cpp
+	<iostream>
+	<cmath>
+	<iomanip>
+	<bits/stdc++.h>
+	<string>
+
+1715626038 source:c:\ÁÌÒÏ\chaban-sofiia-ki23\lab09\prj\moduleschaban\main.cpp
+	<iostream>
+	<cmath>
+	<iomanip>
+	<bits/stdc++.h>
+	<string>
+
+1716038516 source:c:\ÁÌÒÏ\chaban-sofiia-ki23\lab10\prj\moduleschaban\main.cpp
+	<iostream>
+	<cmath>
+	<iomanip>
+	<bits/stdc++.h>
+	<string>
+	<fstream>
+	<locale>
+	<ctime>
+	<cctype>
+	<vector>
+	<cstring>
+
